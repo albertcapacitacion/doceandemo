@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from pathlib import Path
 
 app = FastAPI()
 
