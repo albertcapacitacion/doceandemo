@@ -1,9 +1,10 @@
 from fastapi import FastAPI
-from starlette.responses import FileResponse
+from fastapi.responses import JSONResponse
+from pathlib import Path
 
 app = FastAPI()
 
 #devuelve una pagina web
-@app.get("/")
-async def read_root():
-    return FileResponse('index.html')
+@app.get("/",response_class=JSONResponse)
+def hola():
+    return {"Hola!"}
